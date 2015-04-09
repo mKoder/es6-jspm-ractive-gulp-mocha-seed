@@ -4,9 +4,9 @@ import listView from '../list/listView';
 
 export default class {
 
-    constructor(httpClient = httpClient) {
+    constructor(client = httpClient) {
         this.storiesUrl = 'http://www.reddit.com/r/all/search.json?q=betting&sort=relevance&t=all';
-        this.httpClient = httpClient;
+        this.httpClient = client;
     }
 
     init() {
