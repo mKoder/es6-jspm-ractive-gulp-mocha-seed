@@ -31,19 +31,16 @@
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",
     "karma-jspm": "^1.1.4",
+    "karma-mocha": "^0.1.10",
     "mocha": "^2.2.1",
-    "mocha-traceur": "^2.1.0",
     "sinon": "^1.14.1",
     "traceur": "0.0.87"
   },
-  "dependencies": {
-    "es6-module-loader": "^0.15.0"
-  },
+  "dependencies": {},
   "jspm": {
     "directories": {},
     "dependencies": {
       "chai": "npm:chai@^2.2.0",
-      "es6-module-loader": "^0.15.0",
       "ractive": "npm:ractive@^0.7.1",
       "reqwest": "npm:reqwest@^1.1.5",
       "sinon": "npm:sinon@^1.14.1",

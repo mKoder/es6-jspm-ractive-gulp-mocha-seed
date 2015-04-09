@@ -14,7 +14,7 @@ really need to be kept simple, and separate
 
 ## Installation
 
-TODO: Describe the installation process
+npm install (adds jspm, gulp with build deps, karma/mocha/test deps)
 
 ## Usage
 
@@ -39,3 +39,9 @@ TODO: Write credits
 ## License
 
 TODO: Write license
+
+## TODO
+
+Consider trying to move as much of the root node_modules as possible into
+JSPM. I tried to have gulp managed by JSPM but had issues trying to get
+it working so parked that for now.
