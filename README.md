@@ -15,10 +15,23 @@ really need to be kept simple, and separate
 ## Installation
 
 npm install (adds jspm, gulp with build deps, karma/mocha/test deps)
+jspm install
 
 ## Usage
 
-TODO: Write usage instructions
+To run tests only, from the command line: "gulp test"
+To run the test and fire up the browser: "gulp"
+
+This should open the demo page showing a list of links
+
+At this point the demo app is running using system.js and is transpiling in browser.
+
+## Primary config & file locations
+
+JSPM: config.js (contains map of named libs, similar to requirejs)
+Building: gulpfile.js (watching, running server, bundling JSPM, linting, running tests)
+Testing: karma.conf.js
+Main entry point for the app: app/main.js
 
 ## Contributing
 
@@ -28,20 +41,8 @@ TODO: Write usage instructions
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-TODO: Write license
-
 ## TODO
 
 Consider trying to move as much of the root node_modules as possible into
-JSPM. I tried to have gulp managed by JSPM but had issues trying to get
+JSPM? I tried to have gulp managed by JSPM but had issues trying to get
 it working so parked that for now.
