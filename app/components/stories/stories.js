@@ -1,15 +1,17 @@
-import httpClient from 'services/httpClient';
+import httpClient from 'services/httpClient/httpClient';
 import Ractive from 'ractive';
 import listView from '../list/listView';
 
 export default class {
 
-    constructor() {
+    constructor(httpClient = httpClient) {
         this.storiesUrl = 'http://www.reddit.com/r/all/search.json?q=betting&sort=relevance&t=all';
+        this.httpClient = httpClient;
     }
 
     init() {
-        httpClient
+
+        this.httpClient
             .getData(this.storiesUrl)
             .then(stories => {
 

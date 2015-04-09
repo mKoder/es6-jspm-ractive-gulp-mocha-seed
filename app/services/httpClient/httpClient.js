@@ -1,12 +1,16 @@
-import reqwest from 'reqwest';
+import http from 'reqwest';
 
 class httpClient {
+
+    constructor() {
+        this.http = http;
+    }
 
     getData(url) {
 
         return new Promise((resolve, reject) => {
 
-            reqwest({
+            this.http({
                 url: url,
                 type: 'json'
             })

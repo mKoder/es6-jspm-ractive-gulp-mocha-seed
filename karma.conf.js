@@ -13,8 +13,8 @@ module.exports = function(config) {
 
     jspm: {
         useBundles: true,
-        loadFiles: ['test/**/*.js'],
-        serveFiles: ['app/*.js','app/**/*.js']
+        loadFiles: ['app/components/**/*.tests.js', 'app/services/**/*.tests.js'],
+        serveFiles: ['app/*.js','app/**/*.js','app/**/*.hbs']
     },
 
     // list of files / patterns to load in the browser

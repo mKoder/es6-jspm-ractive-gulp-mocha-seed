@@ -12,7 +12,10 @@ System.config({
     "ractive": "npm:ractive@0.7.1",
     "reqwest": "npm:reqwest@1.1.5",
     "services": "app/services",
+    "sinon": "npm:sinon@1.14.1",
     "text": "github:systemjs/plugin-text@0.0.2",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.87",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.87",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.1.2"
     },
@@ -35,6 +38,9 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "type-detect": "npm:type-detect@0.1.1"
     },
+    "npm:formatio@1.1.1": {
+      "samsam": "npm:samsam@1.1.2"
+    },
     "npm:ractive@0.7.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
@@ -43,6 +49,14 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:sinon@1.14.1": {
+      "formatio": "npm:formatio@1.1.1",
+      "lolex": "npm:lolex@1.1.0",
+      "util": "npm:util@0.10.3"
+    },
+    "npm:util@0.10.3": {
+      "inherits": "npm:inherits@2.0.1"
     }
   }
 });
