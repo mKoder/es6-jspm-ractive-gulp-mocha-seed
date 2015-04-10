@@ -4,15 +4,24 @@ import listView from '../list/listView';
 
 export default class {
 
+    /**
+     * Constructs the object, allows us to override the default client
+     * so we can mock for testing. Using ES6 default parameter value
+     *
+     * @constructor
+     */
     constructor(client = httpClient) {
         this.storiesUrl = 'http://www.reddit.com/r/all/search.json?q=betting&sort=relevance&t=all';
         this.httpClient = client;
     }
 
+    /**
+     * Initialises the app, fetching data from stories url. Uses 
+     */
     init() {
 
         this.httpClient
-            .getData(this.storiesUrl)
+            .getData(this.storiesUrl, 'jsonp', 'jsonp')
             .then(stories => {
 
                 let processedStories = this.processStoryData(stories);

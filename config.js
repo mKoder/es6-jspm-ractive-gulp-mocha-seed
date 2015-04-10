@@ -1,4 +1,10 @@
 System.config({
+  "transpiler": "babel",
+  "babelOptions": {
+    "optional": [
+      "runtime"
+    ]
+  },
   "paths": {
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
@@ -8,15 +14,16 @@ System.config({
 
 System.config({
   "map": {
+    "babel": "npm:babel-core@5.0.12",
+    "babel-runtime": "npm:babel-runtime@5.0.12",
     "chai": "npm:chai@2.2.0",
+    "core-js": "npm:core-js@0.8.1",
     "ractive": "npm:ractive@0.7.1",
     "reqwest": "npm:reqwest@1.1.5",
     "services": "app/services",
     "sinon": "npm:sinon@1.14.1",
     "systemjs/plugin-text": "github:systemjs/plugin-text@0.0.2",
     "text": "github:systemjs/plugin-text@0.0.2",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.87",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.87",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.1.2"
     },
@@ -34,6 +41,9 @@ System.config({
       "deep-eql": "npm:deep-eql@0.1.3",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:core-js@0.8.1": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:deep-eql@0.1.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",

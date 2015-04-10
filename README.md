@@ -24,7 +24,32 @@ To run the test and fire up the browser: "gulp"
 
 This should open the demo page showing a list of links
 
-At this point the demo app is running using system.js and is transpiling in browser.
+At this point the demo app is running using system.js and is transpiling in browser. This is
+fine for dev, but not what we'd want for production, so we can go one step further. JSPM supports
+creating self executing bundles, which are a transpiled version of the app, ready for today's browsers.
+
+## Building for production
+
+1) Run "gulp build" at the root of the project, this lints, tests, and then calls jspm's bundleSFX
+2) In index.html, comment out the following:
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('app/main');
+    </script>
+
+and add back in:
+
+    <script src="jspm_packages/traceur-runtime.js"></script>
+    <script src="dist/build.js"></script>
+
+The traceur runtime is required for using classes in prod. I believe that if babel is used instead,
+no runtime is required, so there is a todo to review switching to that.
+
+Run a build to create the bundle - "gulp build"
+
+
 
 ## Primary config & file locations
 
@@ -46,3 +71,5 @@ Main entry point for the app: app/main.js
 Consider trying to move as much of the root node_modules as possible into
 JSPM? I tried to have gulp managed by JSPM but had issues trying to get
 it working so parked that for now.
+
+Review whether to switch traceur for babel

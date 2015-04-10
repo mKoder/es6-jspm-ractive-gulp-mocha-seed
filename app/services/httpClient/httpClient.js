@@ -6,13 +6,14 @@ class httpClient {
         this.http = http;
     }
 
-    getData(url) {
+    getData(url, requestType = 'json', jsonpQueryName = 'callback') {
 
         return new Promise((resolve, reject) => {
 
             this.http({
                 url: url,
-                type: 'json'
+                type: requestType,
+                jsonpCallback: jsonpQueryName
             })
             .then((resp) => resolve([resp,resp]), (err, msg) => reject(err));
         });

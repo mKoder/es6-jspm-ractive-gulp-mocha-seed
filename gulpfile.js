@@ -51,5 +51,5 @@ gulp.task('test', function(done) {
 
 });
 
-gulp.task('build', ['lint','jspm','test']);
+gulp.task('build', ['lint','test','jspm']);
 gulp.task('default', ['lint','test','watch', 'connect']);
