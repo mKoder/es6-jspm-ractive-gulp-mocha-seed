@@ -1,4 +1,4 @@
-# Seed / example project with ES6, JSPM, RACTIVE, GULP, KARMA, MOCHA
+# Seed / example project with ES6, JSPM, Ractive, Gulp, Karma, Mocha
 
 I wanted to create a project which gave me a full workflow using ES6 with traspilation
 to ES5, a build process, and unit testing.
@@ -41,15 +41,9 @@ creating self executing bundles, which are a transpiled version of the app, read
 
 and add back in:
 
-    <script src="jspm_packages/traceur-runtime.js"></script>
     <script src="dist/build.js"></script>
 
-The traceur runtime is required for using classes in prod. I believe that if babel is used instead,
-no runtime is required, so there is a todo to review switching to that.
-
 Run a build to create the bundle - "gulp build"
-
-
 
 ## Primary config & file locations
 
@@ -71,5 +65,3 @@ Main entry point for the app: app/main.js
 Consider trying to move as much of the root node_modules as possible into
 JSPM? I tried to have gulp managed by JSPM but had issues trying to get
 it working so parked that for now.
-
-Review whether to switch traceur for babel
