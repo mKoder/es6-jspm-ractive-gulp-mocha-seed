@@ -65,3 +65,5 @@ Main entry point for the app: app/main.js
 Consider trying to move as much of the root node_modules as possible into
 JSPM? I tried to have gulp managed by JSPM but had issues trying to get
 it working so parked that for now.
+
+Benchmark the performance of Ractive for large datasets and frequently changing data.
